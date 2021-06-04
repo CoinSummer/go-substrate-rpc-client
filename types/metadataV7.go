@@ -239,6 +239,10 @@ func (s StorageFunctionMetadataV5) IsDoubleMap() bool {
 	return s.Type.IsDoubleMap
 }
 
+func (s StorageFunctionMetadataV5) IsNMap() bool {
+	return false
+}
+
 func (s StorageFunctionMetadataV5) Hasher() (hash.Hash, error) {
 	if s.Type.IsMap {
 		return s.Type.AsMap.Hasher.HashFunc()

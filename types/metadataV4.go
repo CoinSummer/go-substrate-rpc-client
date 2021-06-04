@@ -119,6 +119,7 @@ type StorageEntryMetadata interface {
 	IsPlain() bool
 	IsMap() bool
 	IsDoubleMap() bool
+	IsNMap() bool
 	Hasher() (hash.Hash, error)
 	Hasher2() (hash.Hash, error)
 }
@@ -250,6 +251,10 @@ func (s StorageFunctionMetadataV4) IsMap() bool {
 
 func (s StorageFunctionMetadataV4) IsDoubleMap() bool {
 	return s.Type.IsDoubleMap
+}
+
+func (s StorageFunctionMetadataV4) IsNMap() bool {
+	return false
 }
 
 func (s StorageFunctionMetadataV4) Hasher() (hash.Hash, error) {
