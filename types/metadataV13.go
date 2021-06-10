@@ -10,6 +10,7 @@ import (
 
 // Modelled file
 // https://github.com/polkadot-js/api/blob/master/packages/types/src/interfaces/metadata/types.ts
+
 type MetadataV13 struct {
 	Modules   []ModuleMetadataV13
 	Extrinsic ExtrinsicV11

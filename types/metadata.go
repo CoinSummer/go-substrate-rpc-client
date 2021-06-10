@@ -128,8 +128,8 @@ func (m *Metadata) Decode(decoder scale.Decoder) error {
 		m.IsMetadataV12 = true
 		err = decoder.Decode(&m.AsMetadataV12)
 	case 13:
-		m.IsMetadataV13 = true
-		err = decoder.Decode(&m.AsMetadataV13)
+		m.IsMetadataV12 = true
+		err = decoder.Decode(&m.AsMetadataV12)
 	default:
 		return fmt.Errorf("unsupported metadata version %v", m.Version)
 	}
